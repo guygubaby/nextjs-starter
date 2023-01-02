@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 export const useLocalStorage = <T = any>(key: string, initialValue: T) => {
   const getInitailValue = () => {
     const item = localStorage.getItem(key)

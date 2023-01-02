@@ -1,4 +1,3 @@
-import { useEffect, useMemo } from 'react'
 import { ColorSchemaEnum, useColorSchema } from './useColorSchema'
 
 export const useDark = () => {

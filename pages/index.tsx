@@ -1,4 +1,3 @@
-import { useAtom } from 'jotai'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import type { ChangeEvent } from 'react'
@@ -30,14 +29,14 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <main className='py-30 w-full flex flex-col items-center'>
+      <main className='py-40 w-full flex flex-col items-center'>
         <p>Bryce NextJs</p>
 
-        <p className='my-10 op80'>Opinionated Next.js starter</p>
+        <p className='my-10 opacity-60'>Opinionated Next.js starter</p>
 
         <section className='flex flex-col max-w-2xl'>
           <input
-            className='outline-none rounded px-2 py-4px text-center dark:text-$color-black'
+            className='outline-none rounded px-2 py-1 text-center dark:text-color-black'
             placeholder='Your name'
             autoComplete='false'
             value={name}

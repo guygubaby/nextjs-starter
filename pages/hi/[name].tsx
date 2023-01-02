@@ -10,10 +10,10 @@ const YourPage = () => {
 
   return (
     <section className='flex flex-col items-center w-full pt-10'>
-      <div className='i-carbon-pedestrian text-4xl inline-block' />
-      <p>Hi, {name}</p>
-      <p>Name from store: {nameFromStore}</p>
-      <p className='text-sm op50'>
+      <div className='i-fxemoji-2hearts text-4xl inline-block' />
+      <p className='mt-6'>Hi, {name}</p>
+      <p className='my-4'>Name from store: {nameFromStore}</p>
+      <p className='text-sm opacity-50'>
         <em>Dynamic route!</em>
       </p>
 

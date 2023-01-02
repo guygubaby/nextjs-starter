@@ -1,5 +1,3 @@
-import { atom } from 'jotai'
-
 const name = atom<string>('')
 
 export const nameAtom = atom<string, string>(

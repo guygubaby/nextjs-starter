@@ -1,5 +1,5 @@
-import '@unocss/reset/tailwind.css'
 import '../styles/globals.css'
+import '../styles/tailwind.css'
 import 'uno.css'
 import type { AppProps } from 'next/app'
 import { Provider } from 'jotai'

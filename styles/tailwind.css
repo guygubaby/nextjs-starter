@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply text-[0.9em] outline-none px-3 py-[4px] rounded inline-block cursor-pointer select-none opacity-75 hover:opacity-100 transition duration-200 ease-in-out border border-gray-300 disabled:bg-gray-600;
+}

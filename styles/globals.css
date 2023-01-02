@@ -10,11 +10,9 @@
 }
 
 html {
-  background-color: var(--color-white);
-  color: var(--color-black);
+  @apply bg-color-white text-color-black;
 }
 
 html.dark {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  @apply bg-color-black text-color-white;
 }
