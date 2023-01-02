@@ -1,4 +1,5 @@
 import type { HTMLAttributes } from 'react'
+import { useEffect, useState } from 'react'
 
 const Icon = (props: HTMLAttributes<HTMLSpanElement>) => {
   const [isMounted, setIsMounted] = useState(false)

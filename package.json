@@ -39,7 +39,6 @@
     "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4",
     "unocss": "^0.48.0",
-    "unplugin-auto-import": "^0.12.1",
     "unplugin-icons": "^0.14.15"
   }
 }
