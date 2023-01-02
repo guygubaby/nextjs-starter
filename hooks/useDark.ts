@@ -1,20 +1,16 @@
-import { useEffect, useLayoutEffect, useState } from 'react'
+import { useEffect, useMemo } from 'react'
+import { ColorSchemaEnum, useColorSchema } from './useColorSchema'
 
 export const useDark = () => {
-  const Key = 'color-schema'
-  const [isDark, setIsDark] = useState(false)
+  const [colorSchema, setColorSchema] = useColorSchema()
 
-  useLayoutEffect(() => {
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    const setting = localStorage.getItem(Key) || 'auto'
-    if (setting === 'dark' || (prefersDark && setting !== 'light')) {
-      document.documentElement.classList.toggle('dark', true)
-      setIsDark(true)
-    }
-  }, [])
+  const isDark = useMemo(() => colorSchema === ColorSchemaEnum.dark, [colorSchema])
+
+  const setIsDark = (value: boolean) => {
+    setColorSchema(value ? ColorSchemaEnum.dark : ColorSchemaEnum.light)
+  }
 
   useEffect(() => {
-    localStorage.setItem(Key, isDark ? 'dark' : 'light')
     document.documentElement.classList.toggle('dark', isDark)
   }, [isDark])
 

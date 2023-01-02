@@ -3,3 +3,18 @@
   padding: 0;
   margin: 0;
 }
+
+:root {
+  --color-black: #1f1c2e;
+  --color-white: #f3f6fd;
+}
+
+html {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+html.dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}

@@ -3,9 +3,9 @@ import Footer from '../Footer'
 
 const DefaultLayout = ({ children }: { children: React.ReactElement }) => {
   return <>
-    <section className="w-screen min-h-screen text-#1f1c2e bg-#f3f6fd dark:text-gray-200 dark:bg-#1f1c2e">
+    <section className="w-screen min-h-screen">
       {children}
-      <p className="text-center">[default layout]</p>
+      <p className="text-center text-gray-500 mb-4">[default layout]</p>
       <Footer />
     </section>
   </>

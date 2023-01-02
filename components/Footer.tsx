@@ -16,7 +16,7 @@ const Footer = () => {
         <Icon className="i-emojione-beating-heart ml-1 mt-2px"></Icon>
       </p>
 
-      <p className='flex'>
+      <p className='flex mt-2'>
         { isDark
           ? <Icon className='icon-btn i-carbon-sun' onClick={() => setIsDark(false)}></Icon>
           : <Icon className='icon-btn i-carbon-moon' onClick={() => setIsDark(true)}></Icon>
