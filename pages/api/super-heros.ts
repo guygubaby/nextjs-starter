@@ -9,7 +9,7 @@ const Heros: IHero[] = [
   { name: 'Batman', power: 'Money' },
   { name: 'Superman', power: 'Everything' },
   { name: 'Spiderman', power: 'Spidey Sense' },
-
+  { name: 'Bryce', power: 'Handsome' },
 ]
 
 export default (req: NextApiRequest, res: NextApiResponse) => {

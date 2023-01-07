@@ -1,6 +1,7 @@
 import { useAtom } from 'jotai'
 import { useRouter } from 'next/router'
 import { nameAtom } from '../../store/name'
+import IconFxemoji2hearts from '~icons/fxemoji/2hearts'
 
 const YourPage = () => {
   const router = useRouter()
@@ -10,7 +11,7 @@ const YourPage = () => {
 
   return (
     <section className='flex flex-col items-center w-full pt-10'>
-      <div className='i-fxemoji-2hearts text-4xl inline-block' />
+      <IconFxemoji2hearts className='text-4xl inline-block' />
       <p className='mt-6'>Hi, {name}</p>
       <p className='my-4'>Name from store: {nameFromStore}</p>
       <p className='text-sm opacity-50'>

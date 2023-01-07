@@ -1,14 +1,13 @@
-const Unocss = require('@unocss/webpack').default
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  webpack: (config, { dev }) => {
-    dev && (config.cache = false)
-
+  webpack: (config) => {
     config.plugins = [
       ...config.plugins,
-      Unocss(),
+      require('unplugin-icons/webpack')({
+        compiler: 'jsx',
+        jsx: 'react',
+      }),
     ]
 
     return config

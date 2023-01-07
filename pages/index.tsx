@@ -1,8 +1,10 @@
 import { useAtom } from 'jotai'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import type { ChangeEvent } from 'react'
 import { nameAtom } from '../store/name'
+import IconStrawberry from '~icons/emojione/strawberry'
 
 export default function Home() {
   const APP_TITLE = 'Opinionated Nextjs starter'
@@ -31,7 +33,9 @@ export default function Home() {
       </Head>
 
       <main className='py-40 w-full flex flex-col items-center'>
-        <p>Bryce NextJs</p>
+        <IconStrawberry className='text-3xl mb-8' />
+
+        <p>Hi there</p>
 
         <p className='my-10 opacity-60'>Opinionated Next.js starter</p>
 
@@ -53,6 +57,8 @@ export default function Home() {
               Go
             </button>
           </div>
+
+          <Link href='/super-heros' className='text-center underline mt-8'>super-heros</Link>
         </section>
       </main>
     </>

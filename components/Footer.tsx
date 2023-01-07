@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { useDark } from '../hooks/useDark'
-import Icon from './Icon'
+import IconHeart from '~icons/emojione/beating-heart'
+import IconSun from '~icons/carbon/sun'
+import IconMoon from '~icons/carbon/moon'
 
 const Footer = () => {
   const { isDark, setIsDark } = useDark()
@@ -13,13 +15,13 @@ const Footer = () => {
           @bryce
         </Link>
         with
-        <Icon className='i-emojione-beating-heart ml-1 mt-[2px]'></Icon>
+        <IconHeart className='ml-1 mt-[2px]' />
       </p>
 
       <p className='flex mt-2'>
         { isDark
-          ? <Icon className='icon-btn i-carbon-sun' onClick={() => setIsDark(false)}></Icon>
-          : <Icon className='icon-btn i-carbon-moon' onClick={() => setIsDark(true)}></Icon>
+          ? <IconSun className='icon-btn' onClick={() => setIsDark(false)}></IconSun>
+          : <IconMoon className='icon-btn' onClick={() => setIsDark(true)}></IconMoon>
         }
       </p>
     </footer>
