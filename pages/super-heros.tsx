@@ -17,7 +17,7 @@ const SuperHeros = () => {
   return (
     <section className='text-center pt-20'>
       <h2 className='text-2xl'>Super Heros</h2>
-      <ul className='mt-6'>
+      <ul className='text-center mt-6'>
         {data.map((hero: any) => (
           <li key={hero.name} className='flex items-center justify-center gap-4'>
             <h3 className='text-xl'>{hero.name}</h3>

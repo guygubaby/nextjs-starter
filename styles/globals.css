@@ -10,7 +10,7 @@
 }
 
 html {
-  @apply bg-color-white text-color-black;
+  @apply bg-color-white text-color-black transition duration-75;
 }
 
 html.dark {

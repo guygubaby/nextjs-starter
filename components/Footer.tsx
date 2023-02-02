@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { useDark } from '../hooks/useDark'
+import useDarkMode from '../hooks/useDarkMode'
 import IconHeart from '~icons/emojione/beating-heart'
 import IconSun from '~icons/carbon/sun'
 import IconMoon from '~icons/carbon/moon'
 
 const Footer = () => {
-  const { isDark, setIsDark } = useDark()
+  const { toggleDark, isDark } = useDarkMode()
 
   return (
     <footer className='flex flex-col items-center justify-center'>
@@ -20,8 +20,8 @@ const Footer = () => {
 
       <p className='flex mt-2'>
         { isDark
-          ? <IconSun className='icon-btn' onClick={() => setIsDark(false)}></IconSun>
-          : <IconMoon className='icon-btn' onClick={() => setIsDark(true)}></IconMoon>
+          ? <IconSun className='icon-btn' onClick={() => toggleDark()}></IconSun>
+          : <IconMoon className='icon-btn' onClick={() => toggleDark()}></IconMoon>
         }
       </p>
     </footer>
