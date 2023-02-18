@@ -8,29 +8,31 @@ const Footer = () => {
   const { toggleDark, isDark } = useDarkMode()
 
   return (
-    <footer className="flex flex-col items-center justify-center">
-      <p className="flex">
+    <footer className='flex flex-col items-center justify-center'>
+      <p className='flex'>
         Made by
         <Link
-          href="https://github.com/guygubaby"
-          target="_blank"
-          className="mx-1 text-purple-500 hover:underline"
+          href='https://github.com/guygubaby'
+          target='_blank'
+          className='mx-1 text-purple-500 hover:underline'
         >
           @bryce
         </Link>
         with
-        <IconHeart className="ml-1 mt-[2px]" />
+        <IconHeart className='ml-1 mt-[2px]' />
       </p>
 
-      <p className="flex mt-2">
-        {isDark ? (
-          <IconSun className="icon-btn" onClick={() => toggleDark()}></IconSun>
-        ) : (
+      <p className='flex mt-2'>
+        {isDark
+          ? (
+          <IconSun className='icon-btn' onClick={() => toggleDark()}></IconSun>
+            )
+          : (
           <IconMoon
-            className="icon-btn"
+            className='icon-btn'
             onClick={() => toggleDark()}
           ></IconMoon>
-        )}
+            )}
       </p>
     </footer>
   )
