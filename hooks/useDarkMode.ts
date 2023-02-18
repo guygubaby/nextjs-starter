@@ -2,13 +2,10 @@ import { useEffect } from 'react'
 import { useDarkMode } from 'usehooks-ts'
 
 export default function useDark() {
-  const { isDarkMode: isDark, toggle: toggleDark } = useDarkMode()
+  const { isDarkMode: isDark, toggle: toggleDark } = useDarkMode(false)
 
   useEffect(() => {
-    if (isDark)
-      document.documentElement.classList.add('dark')
-    else
-      document.documentElement.classList.remove('dark')
+    document.documentElement.classList.toggle('dark', isDark)
   }, [isDark])
 
   return {

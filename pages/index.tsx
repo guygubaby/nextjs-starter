@@ -3,8 +3,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import type { ChangeEvent } from 'react'
-import { nameAtom } from '../store/name'
-import IconStrawberry from '~icons/emojione/strawberry'
+import { name as nameAtom } from '../store/name'
+import IconStrawberry from '~icons/emojione/strawberry.jsx'
 
 export default function Home() {
   const APP_TITLE = 'Opinionated Nextjs starter'
