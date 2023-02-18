@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import useDarkMode from '../hooks/useDarkMode'
+import { ThemeToggler } from './ThemeToggler'
 import IconHeart from '~icons/emojione/beating-heart.jsx'
-import IconSun from '~icons/carbon/sun.jsx'
-import IconMoon from '~icons/carbon/moon.jsx'
 
 const Footer = () => {
   const { toggleDark, isDark } = useDarkMode()
@@ -22,18 +21,7 @@ const Footer = () => {
         <IconHeart className='ml-1 mt-[2px]' />
       </p>
 
-      <p className='flex mt-2'>
-        {isDark
-          ? (
-          <IconSun className='icon-btn' onClick={() => toggleDark()}></IconSun>
-            )
-          : (
-          <IconMoon
-            className='icon-btn'
-            onClick={() => toggleDark()}
-          ></IconMoon>
-            )}
-      </p>
+      <ThemeToggler isDark={isDark} toggleDark={toggleDark} />
     </footer>
   )
 }
